@@ -1,164 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HASDANTECH UNLOCK.ORG</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        header img {
-            width: 150px;
-            height: auto;
-        }
-        nav {
-            background: #00264d;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 15px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #0059b3;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
-        }
-        .pricing, .payment {
-            margin-top: 20px;
-            padding: 20px;
-            background: #e6e6e6;
-        }
-        .pricing table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .pricing th, .pricing td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        .pricing th {
-            background: #004080;
-            color: white;
-        }
-        .pay-button, .orange-money-button {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .payment-form input, .payment-form button {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-        }
-        .payment-form button {
-            background: #004080;
-            color: white;
-            border: none;
-        }
-        .payment-form button:hover {
-            background: #00264d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De~Engineer 001 Unlocking Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1f1f1f;
+      color: #f0f0f0;
+    }
+    header, nav, section, footer {
+      padding: 20px;
+    }
+    header {
+      background-color: #2c2c2c;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #333;
+    }
+    nav a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .floating-chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .floating-chat img {
+      width: 30px;
+    }
+    .landing {
+      height: 100vh;
+      background: url('landing-background.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .landing button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      background-color: #00bfff;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .tool-link {
+      color: #00bfff;
+    }
+    form label, form input, form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    form input, form textarea {
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+    form button {
+      background-color: #00bfff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    function enterSite() {
+      document.getElementById('landing').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
+  </script>
 </head>
 <body>
-
+  <div id="landing" class="landing">
+    <h1>Welcome to De~Engineer 001 Unlocking</h1>
+    <p>Fast, Reliable & Professional Unlocking Services</p>
+    <button onclick="enterSite()">Enter</button>
+  </div>  <div id="main-content" style="display:none">
     <header>
-        <img src="A_professional_and_modern_logo_for_'HASDANTECH_UNL.png" alt="HASDANTECH UNLOCK Logo">
-        <h1>HASDANTECH UNLOCK.ORG</h1>
-        <p>Your Trusted Mobile & Device Unlocking Experts</p>
+      <h1>De~Engineer 001 Unlocking Solutions</h1>
     </header>
-
     <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#payment">Payment</a>
-        <a href="#contact">Contact</a>
-    </nav>
+      <a href="#" onclick="showSection('software')">Software</a>
+      <a href="#" onclick="showSection('tools')">Tools</a>
+      <a href="#" onclick="showSection('services')">Services</a>
+      <a href="#" onclick="showSection('pricing')">Pricing</a>
+      <a href="#" onclick="showSection('remote')">Remote Access</a>
+      <a href="#" onclick="showSection('order')">Place Order</a>
+      <a href="#" onclick="showSection('about')">About Us</a>
+    </nav><section id="software">
+  <h2>Software</h2>
+  <p>All software needed for unlocking phones and devices.</p>
+  <a class="tool-link" href="#">Download Unlocking Software</a>
+</section>
 
-    <div class="container">
-        <section id="pricing" class="pricing">
-            <h2>Pricing</h2>
-            <table>
-                <tr>
-                    <th>Service</th>
-                    <th>Price (USD)</th>
-                </tr>
-                <tr>
-                    <td>iPhone Unlocking</td>
-                    <td>$25</td>
-                </tr>
-                <tr>
-                    <td>Android Unlocking</td>
-                    <td>$15</td>
-                </tr>
-                <tr>
-                    <td>FRP Removal</td>
-                    <td>$20</td>
-                </tr>
-                <tr>
-                    <td>IMEI Repair</td>
-                    <td>$30</td>
-                </tr>
-            </table>
+<section id="tools">
+  <h2>Tools</h2>
+  <p>Download tools for Android and Windows unlocking processes.</p>
+  <ul>
+    <li><a class="tool-link" href="#">Android Unlock APK</a></li>
+    <li><a class="tool-link" href="#">Windows Unlock Tool</a></li>
+  </ul>
+</section>
 
-            <div class="pay-button">
-                <a href="https://www.paypal.com/" target="_blank">
-                    <button>Pay with PayPal</button>
-                </a>
-            </div>
-        </section>
+<section id="services">
+  <h2>Services</h2>
+  <p>We offer FRP removal, network unlock, IMEI repair, etc.</p>
+</section>
 
-        <section id="payment" class="payment">
-            <h2>Pay with Orange Money</h2>
-            <p><strong>Orange Money Number:</strong> +232 XXXXXXXX</p>
-            <p>Send your payment to the number above, then submit proof of payment below.</p>
+<section id="pricing">
+  <h2>Pricing</h2>
+  <p>Contact us for current pricing.</p>
+</section>
 
-            <form class="payment-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" required>
+<section id="remote">
+  <h2>Remote Access</h2>
+  <p>Use UltraViewer or AnyDesk for technician/customer support.</p>
+  <ul>
+    <li><a class="tool-link" href="https://www.uvnc.com/downloads/ultravnc.html" target="_blank">UltraViewer for Technician</a></li>
+    <li><a class="tool-link" href="https://anydesk.com/en/downloads" target="_blank">AnyDesk for Customers</a></li>
+  </ul>
+</section>
 
-                <label for="transaction-id">Transaction ID:</label>
-                <input type="text" id="transaction-id" required>
+<section id="order">
+  <h2>Place an Order</h2>
+  <form action="https://formsubmit.co/hasdantech002@gmail.com" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
 
-                <label for="screenshot">Upload Payment Screenshot:</label>
-                <input type="file" id="screenshot" accept="image/*" required>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
 
-                <button type="submit">Submit Payment</button>
-            </form>
-        </section>
-    </div>
- <!-- WhatsApp Chat -->
-    <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="whatsapp-button" style="
-        position: fixed; 
-        bottom: 20px; 
-        right: 20px; 
-        background: #25D366; 
-        color: white; 
-        padding: 10px 15px; 
-        text-decoration: none; 
-        border-radius: 5px;">
-        Chat with Us
-    </a>
+    <label for="service">Requested Service</label>
+    <input type="text" id="service" name="service" required />
 
+    <label for="details">Additional Details</label>
+    <textarea id="details" name="details" rows="4"></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>De~Engineer 001 Unlocking is dedicated to providing reliable and efficient mobile phone unlocking services worldwide.</p>
+</section>
+
+<footer>
+  <p>Contact: <a href="mailto:hasdantech002@gmail.com">hasdantech002@gmail.com</a></p>
+  <p><a href="https://wa.me/2348132974030" target="_blank">WhatsApp Chat 1</a> | <a href="https://wa.me/23277780708" target="_blank">WhatsApp Chat 2</a> | <a href="https://t.me/hasdantech" target="_blank">Telegram</a></p>
+</footer>
+
+  </div>  <a class="floating-chat" href="https://wa.me/23277780708" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat" />
+  </a>
 </body>
 </html>
